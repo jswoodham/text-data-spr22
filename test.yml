@@ -14,6 +14,6 @@ dependencies:
   - pip  # ALWAYS INSTALL PIP if you want to use `pip install` inside the environment!
   - pip:  # now we can tell `pip` to install its own package list automatically
     - textacy
-    - coconut 
+    - coconut -develop[kernel]
     # - -e .  # if we wanted to install local directory (e.g. pyproject.toml/setup.py)
     # - frictionless[json]  # can use standard pip syntax for e.g. options
