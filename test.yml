@@ -1,0 +1,19 @@
+name: test
+channels: 
+  # This is where stuff gets downloaded from
+  - conda-forge
+  - pyviz
+
+dependencies:
+  - python=3.9  # can lock version numbers
+  - ipykernel  # needed to use "python" from a notebook
+#  - irkernel  # could've been "R"
+  - git
+  - pandas
+  - panel  # comes from the pyviz channel
+  - pip  # ALWAYS INSTALL PIP if you want to use `pip install` inside the environment!
+  - pip:  # now we can tell `pip` to install its own package list automatically
+    - textacy
+    - coconut
+    # - -e .  # if we wanted to install local directory (e.g. pyproject.toml/setup.py)
+    # - frictionless[json]  # can use standard pip syntax for e.g. options
